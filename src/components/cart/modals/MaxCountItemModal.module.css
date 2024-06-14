@@ -1,0 +1,32 @@
+.modal{
+    max-width: 1440px;
+    position: relative;
+    display: flex;
+    /*flex-direction: column;*/
+    align-items: center;
+    justify-content: center;
+    top: 30vh;
+    margin: 0 auto;
+    /*transform: translateY(-50%);*/
+}
+
+.modal__title{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 68px;
+    text-align: center;
+    color: white;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    max-width: 825px;
+}
+
+.arrow{
+    position: absolute;
+    left: 15vh;
+}
+
+@media (max-width: 1000px) {
+    .arrow{
+        position: static;
+    }
+}

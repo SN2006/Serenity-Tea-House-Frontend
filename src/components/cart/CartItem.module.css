@@ -1,0 +1,93 @@
+.item-btn{
+    border: none;
+    background: transparent;
+    font-family: "Rosting Gapertas", sans-serif;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    padding: 17px 30px 17px 20px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    min-width: 600px;
+}
+
+.item__img-box{
+    overflow: hidden;
+    margin-right: 2rem;
+}
+
+.item__img-box img{
+    width: 164px;
+    height: 164px;
+    border-radius: 20px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.item__info{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: start;
+}
+
+.item__title{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 34px;
+}
+
+.item__price{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 27.2px;
+}
+
+.item__amount{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: auto;
+    margin-top: auto;
+    transform: translateY(-13px);
+}
+
+.amount-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    border: none;
+    background: rgba(217, 217, 217, 1);
+    border-radius: 50%;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.amount-btn:hover{
+    transform: scale(1.1);
+}
+
+.amount-btn span{
+    display: block;
+    font-family: "Rosting Gapertas", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    vertical-align: center;
+    border: 0;
+    height: 24px;
+    width: 24px;
+    transform: translateY(5px);
+}
+
+.amount__info{
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: center;
+    transform: translateY(5px);
+}

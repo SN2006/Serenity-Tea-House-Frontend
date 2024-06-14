@@ -1,0 +1,47 @@
+.edit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -2rem;
+    animation: 1s cubic-bezier(0.61, 1, 0.88, 1) show;
+}
+
+.card{
+    padding: 18px 36px;
+    background: rgba(159, 149, 143, 0.6);
+    border-radius: 50px;
+    width: calc(80% - 72px);
+}
+
+.edit__title{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 68px;
+    text-align: center;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.error{
+    border-bottom: 1px solid rgba(232, 32, 32, 1);
+}
+
+.edit__actions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 30px auto;
+}
+
+@keyframes show {
+    0%{
+        transform: translateY(3rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0%) scale(1);
+        opacity: 1;
+    }
+}

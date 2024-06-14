@@ -1,0 +1,29 @@
+.button{
+    display: block;
+    font-family: "Rosting Gapertas", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40.8px;
+    text-align: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.button:after{
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: black;
+    transform: translateY(-10px) scale(0);
+    transition: all 0.5s;
+}
+
+.button:hover:after{
+    transform: translateY(-10px) scale(1);
+}
+
+.button:disabled:hover:after{
+    transform: translateY(-10px) scale(0);
+}

@@ -1,0 +1,41 @@
+.edit-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    /*gap: 5px;*/
+}
+
+.edit-input label{
+    color: rgba(255, 255, 255, 1);
+    font-family: "Playfair Display", serif;
+    display: block;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31.99px;
+    text-align: left;
+}
+
+.input{
+    font-family: "Playfair Display", serif;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    /*line-height: 31.99px;*/
+    text-align: center;
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+    transition: all .5s;
+}
+
+.input:focus{
+    border-color: #eddddd;
+}
+
+.error{
+    border-bottom: 1px solid rgba(232, 32, 32, 1);
+}

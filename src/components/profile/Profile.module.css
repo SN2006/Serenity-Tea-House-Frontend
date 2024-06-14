@@ -1,0 +1,146 @@
+.profile{
+    margin: -2rem 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    animation: 1s cubic-bezier(0.61, 1, 0.88, 1) show;
+}
+
+.profile__title{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 68px;
+    text-align: center;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.profile__userinfo{
+    padding: 0 5px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(377px, 1fr));
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card{
+    position: relative;
+    /*min-width: 328px;*/
+    width: 313px;
+    height: 183px;
+    background: rgba(179, 158, 146, 0.5);
+    border-radius: 34px;
+    padding: 2rem;
+}
+
+.card__title{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40.8px;
+    text-align: left;
+    margin: 0 0 1rem;
+}
+
+.card__body{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5rem;
+}
+
+.card__body-item{
+    /*display: flex;*/
+    /*align-items: center;*/
+    margin: 0;
+    font-family: "Rounded Mplus", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 35.64px;
+    text-align: left;
+}
+
+.card__btn{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: absolute;
+    right: 24px;
+    top: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s all;
+
+    font-family: "Rounded Mplus", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 35.64px;
+    text-align: center;
+}
+
+.card__btn img{
+    transform: translateY(-1px);
+    transition: .8s all;
+}
+
+.card__btn:hover img{
+    transform: translateY(-1px) rotate(360deg);
+}
+
+.phone__container{
+    display: inline;
+}
+
+.phone__input:disabled{
+    width: auto;
+    display: inline;
+    margin: 0;
+    font-family: "Rounded Mplus", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 35.64px;
+    text-align: left;
+    background: transparent;
+    border: none;
+    color: rgb(0, 0, 0);
+    transform: translateY(1px);
+}
+
+.exit-btn{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: "Rosting Gapertas", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40.8px;
+    text-align: center;
+}
+
+.exit-btn:after{
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: black;
+    transform: translateY(-10px) scale(0);
+    transition: all 0.5s;
+}
+
+.exit-btn:hover:after{
+    transform: translateY(-10px) scale(1);
+}
+
+@keyframes show {
+    0%{
+        transform: translateY(3rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0%) scale(1);
+        opacity: 1;
+    }
+}

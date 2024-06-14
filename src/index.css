@@ -1,13 +1,41 @@
+@font-face {
+    font-family: 'Rosting Gapertas';
+    font-weight: 700;
+    font-style: normal;
+    src: local('Rosting Gapertas'),
+    url("./fonts/RostingGapertas/RostingGapertasBold-yYLGd.woff2") format('woff2'),
+    url("./fonts/RostingGapertas/RostingGapertasBold-yYLGd.woff") format('woff'),
+    url("./fonts/RostingGapertas/RostingGapertasBold-yYLGd.eot") format('eot');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-style: normal;
+    src: local('Rosting Gapertas'),
+    url("./fonts/PlayfairDisplay/PlayfairDisplay-Bold.woff2") format('woff2'),
+    url("./fonts/PlayfairDisplay/PlayfairDisplay-Bold.woff") format('woff'),
+    url("./fonts/PlayfairDisplay/PlayfairDisplay-Bold.eot") format('eot');
+    font-display: swap;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: 'Rosting Gapertas', sans-serif;
+    font-weight: 700;
+    background: rgba(0, 0, 0, 1);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
 }

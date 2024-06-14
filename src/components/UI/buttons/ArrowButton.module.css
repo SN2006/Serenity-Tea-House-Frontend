@@ -1,0 +1,14 @@
+.button{
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 163.2px;
+    text-align: center;
+    border: none;
+    background: transparent;
+    cursor: grab;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.white{
+    color: #fff;
+}

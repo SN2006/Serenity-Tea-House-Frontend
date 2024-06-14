@@ -1,0 +1,55 @@
+.item{
+    display: flex;
+    flex-direction: column;
+    padding: 32px 25px 39px;
+    background: rgba(217, 217, 217, 1);
+    border-radius: 20px;
+    align-items: center;
+    gap: 1rem;
+    width: 331px;
+    border: none;
+    cursor: grab;
+}
+
+.item__img-box{
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    width: 281px;
+    height: 281px;
+}
+
+.item__img-box img{
+    width: 281px;
+    height: 281px;
+}
+
+.item__content{
+    font-family: "Rosting Gapertas", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 34px;
+    text-align: center;
+    /*white-space: normal;*/
+    /*max-width: 100%;*/
+}
+
+.item__cart {
+    position: absolute;
+    border: none;
+    background: transparent;
+    transition: all .5s;
+    cursor: pointer;
+    right: 11px;
+    top: 11px;
+}
+
+.item__cart:hover{
+    transform: scale(1.1);
+}
+
+.item__cart img{
+    width: 34px;
+    height: 42px;
+}

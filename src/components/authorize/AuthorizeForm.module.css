@@ -1,0 +1,16 @@
+.authorize-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: -2.5rem auto 59px   ;
+}
+
+.card{
+    background: rgba(159, 149, 143, 0.6);
+    border-radius: 78px;
+    padding: 35px 70px;
+    max-width: 675px;
+    transition: all 0.5s;
+    overflow: hidden;
+}

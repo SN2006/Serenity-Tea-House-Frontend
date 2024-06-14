@@ -1,17 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './fonts/RostingGapertas/RostingGapertasBold-yYLGd.eot';
+import './fonts/RostingGapertas/RostingGapertasBold-yYLGd.woff';
+import './fonts/RostingGapertas/RostingGapertasBold-yYLGd.woff2';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import CartContextProvider from "./store/CartContextProvider";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <CartContextProvider>
+        <App />
+    </CartContextProvider>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

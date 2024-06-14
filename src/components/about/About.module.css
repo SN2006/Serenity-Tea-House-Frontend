@@ -1,0 +1,48 @@
+.about-container{
+    padding: 23px 80px 0 108px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 34px;
+    text-align: left;
+    /*animation: 1s cubic-bezier(0.61, 1, 0.88, 1) show;*/
+}
+
+.about__header{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 54px;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.about__info{
+    margin-bottom: 4rem;
+}
+
+.about__mission{
+    margin-bottom: 3rem;
+}
+
+.about__list-paragraph{
+    transform: translateX(-2rem);
+    margin: -1px 0 2rem 0;
+}
+
+.h2{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 41px;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+@keyframes show {
+    0%{
+        transform: translateY(3rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0%) scale(1);
+        opacity: 1;
+    }
+}
