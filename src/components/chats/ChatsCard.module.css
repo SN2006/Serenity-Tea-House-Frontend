@@ -1,0 +1,6 @@
+.card{
+    background: rgba(159, 149, 143, 0.4);
+    border-radius: 50px;
+    /*width: calc(100% - 50px);*/
+    max-width: 1110px;
+}

@@ -24,7 +24,7 @@ body {
     margin: 0;
     font-family: 'Rosting Gapertas', sans-serif;
     font-weight: 700;
-    background: rgba(0, 0, 0, 1);
+    background: #E5D8D0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -39,3 +39,24 @@ code {
     margin: 0 auto;
     position: relative;
 }
+
+.un-link{
+    outline: none;
+    text-decoration: none;
+}
+
+/*a :focus, a :active {*/
+/*    outline: none;*/
+/*}*/
+
+/*a, a:visited {*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*a:hover {*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*a {*/
+/*    color: inherit;*/
+/*}*/

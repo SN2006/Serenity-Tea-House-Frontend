@@ -22,9 +22,9 @@ const Navbar = (props) => {
     return (
         <nav>
             <div className={styles['nav-container']}>
-                <NavbarButton onClick={collectionsClickHandler} text="collections" disabled={collectionsButtonDisabled} />
-                <NavbarButton onClick={aboutClickHandler} text="about us" disabled={aboutButtonDisabled} />
-                <NavbarButton onClick={deliveryClickHandler} text="delivery" disabled={deliveryButtonDisabled} />
+                <NavbarButton onClick={collectionsClickHandler} text="Collections" disabled={collectionsButtonDisabled} />
+                <NavbarButton onClick={aboutClickHandler} text="About us" disabled={aboutButtonDisabled} />
+                <NavbarButton onClick={deliveryClickHandler} text="Delivery" disabled={deliveryButtonDisabled} />
             </div>
         </nav>
     );

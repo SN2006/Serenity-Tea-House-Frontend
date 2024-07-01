@@ -53,7 +53,7 @@ const About = (props) => {
                         just a drink, but a real ritual that brings pleasure and harmony.
                     </motion.p>
                 </motion.div>
-                <motion.div initial="hidden" whileInView="visible" viewport={{amount: 0.2, once: true}}>
+                <motion.div initial="hidden" whileInView="visible" viewport={{amount: 0.5, once: true}}>
                     <motion.h2 variants={verticalAnimation(0)} className={styles.h2}>Why Choose Us?</motion.h2>
                     <ul>
                         <motion.li variants={horizontalAnimation(2)}>

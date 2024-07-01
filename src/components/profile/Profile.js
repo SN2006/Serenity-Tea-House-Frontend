@@ -5,6 +5,35 @@ import PhoneInput from "react-phone-input-2";
 import EditIcon from "../../images/icons/EditIcon.svg"
 import EditUserDataPage from "./EditUserDataPage";
 import UnderlineButton from "../UI/buttons/UnderlineButton";
+import {Link} from "react-router-dom";
+import {motion} from "framer-motion";
+import {ORDERS_PAGE} from "../../utils/Constants";
+
+const buttonVariants = {
+    simple: {
+        scale: 1
+    },
+    hover: {
+        scale: 1.05
+    },
+    tap: {
+        scale: 0.9
+    }
+}
+
+const ProfileButton = (props) => {
+    return <motion.button
+        className={styles['profile__btn']}
+        onClick={props.onClick}
+        variants={buttonVariants}
+        whileHover="hover"
+        whileTap="tap"
+    >
+        <span>
+            {props.children}
+        </span>
+    </motion.button>
+}
 
 const UserDetailsCard = (props) => {
     return <div className={styles.card}>
@@ -60,7 +89,8 @@ const Profile = (props) => {
             {},
             {}
         ).then(response => {
-            // console.log(response.data.address);
+            console.log(response.data);
+            // console.log(new Date(Date.parse(response.data.createdAt)))
             setUser(response.data);
             setAddress(response.data.address);
             // setTimeout(() => {
@@ -104,7 +134,7 @@ const Profile = (props) => {
     return <div className="container">
         <div className={styles.profile}>
             <h1 className={styles['profile__title']}>Hi, {user.name}</h1>
-            <section className={styles["profile__userinfo"]}>
+            <section className={styles["profile__section"]}>
                 <UserDetailsCard
                     onEdit={onClickEditButtonHandler}
                     key={1}
@@ -130,7 +160,17 @@ const Profile = (props) => {
                     }}
                 />
             </section>
-            <UnderlineButton onClick={exitHandler} className={styles["exit-btn"]}>Exit</UnderlineButton>
+            <section className={styles['profile__section']}>
+                <ProfileButton onClick={() => props.onChangePage(ORDERS_PAGE)}>My orders</ProfileButton>
+            </section>
+            <div className={styles.actions}>
+                {
+                    user.role === "ADMIN"
+                    &&
+                    <Link to={"/admin"} className={styles["admin-link"]}>admin</Link>
+                }
+                <UnderlineButton onClick={exitHandler} className={styles["exit-btn"]}>Exit</UnderlineButton>
+            </div>
         </div>
     </div>
 }

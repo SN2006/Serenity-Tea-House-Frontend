@@ -393,7 +393,7 @@ const CheckForm = (props) => {
         isInputValidityPeriodValid && isInputCvvValid && props.ctx.items.length > 0;
 
     let content = <p className={styles["cart__empty-msg"]}>the shopping cart is empty, it means  that it's time to buy something</p>
-
+    console.log(props.ctx.items);
     if (props.ctx.items.length > 0) {
         content = <div className={styles["cart__items"]}>
             {props.ctx.items.map((item) =>

@@ -16,7 +16,7 @@
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.profile__userinfo{
+.profile__section{
     padding: 0 5px;
     width: 100%;
     display: grid;
@@ -24,6 +24,7 @@
     justify-items: center;
     align-items: center;
     gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .card{
@@ -109,6 +110,14 @@
     transform: translateY(1px);
 }
 
+.actions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
 .exit-btn{
     background: transparent;
     border: none;
@@ -116,7 +125,6 @@
     font-family: "Rosting Gapertas", sans-serif;
     font-size: 24px;
     font-weight: 700;
-    line-height: 40.8px;
     text-align: center;
 }
 
@@ -132,6 +140,50 @@
 
 .exit-btn:hover:after{
     transform: translateY(-10px) scale(1);
+}
+
+.admin-link{
+    font-family: "Rosting Gapertas", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: rgba(109, 98, 85, 1);
+    outline: none;
+    text-decoration: none;
+}
+
+.admin-link:after{
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: black;
+    transform: translateY(-5px) scale(0);
+    transition: all 0.5s;
+}
+
+.admin-link:hover:after{
+    transform: translateY(-5px) scale(1);
+}
+
+.profile__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 34px;
+    background: rgba(179, 158, 146, 0.5);
+    border: none;
+    cursor: pointer;
+    width: 377px;
+    height: 80px;
+}
+
+.profile__btn span{
+    font-family: 'Rosting Gapertas', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40.8px;
+    text-align: center;
 }
 
 @keyframes show {

@@ -87,7 +87,7 @@ const Home = (props) => {
             </motion.section>
             <motion.section initial="hidden"
                             whileInView="visible"
-                            viewport={{amount: 0.3, once: true}}
+                            viewport={{amount: 0.8, once: true}}
                             className={styles["home__image-stand"]}>
                 <div className="container">
                     <div className={styles["image-stand__inner"]}>
@@ -128,7 +128,7 @@ const Home = (props) => {
             </motion.section>
             <motion.section initial="hidden"
                             whileInView="visible"
-                            viewport={{amount: 0.3, once: true}}
+                            viewport={{amount: 0.5, once: true}}
                             className={styles['home__quiz']}>
                 <div className="container">
                     <div className={styles["home__inner"]}>

@@ -4,12 +4,15 @@ import './fonts/RostingGapertas/RostingGapertasBold-yYLGd.eot';
 import './fonts/RostingGapertas/RostingGapertasBold-yYLGd.woff';
 import './fonts/RostingGapertas/RostingGapertasBold-yYLGd.woff2';
 import './index.css';
-import App from './App';
 import CartContextProvider from "./store/CartContextProvider";
+import {BrowserRouter} from "react-router-dom";
+import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <CartContextProvider>
-        <App />
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
     </CartContextProvider>
 );

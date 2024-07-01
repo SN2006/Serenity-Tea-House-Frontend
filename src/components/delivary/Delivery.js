@@ -29,7 +29,7 @@ const Delivery = (props) => {
                 </motion.p>
                 <motion.div initial="hidden"
                             whileInView="visible"
-                            viewport={{amount: 0.3, once: true}}
+                            viewport={{amount: 0.5, once: true}}
                             className={styles['delivery__section']}>
                     <motion.h2 variants={horizontalAnimation(2)} className={styles.h2}>Terms of Delivery</motion.h2>
                     <motion.p variants={horizontalAnimation(3)} className={styles['delivery__terms-paragraph']}>
@@ -63,7 +63,7 @@ const Delivery = (props) => {
                 </motion.div>
                 <motion.div initial="hidden"
                             whileInView="visible"
-                            viewport={{amount: 0.3, once: true}}
+                            viewport={{amount: 0.6, once: true}}
                             className={styles['delivery__section']}>
                     <motion.h2 variants={horizontalAnimation(1)} className={styles.h2}>
                         Payment methods
@@ -101,7 +101,7 @@ const Delivery = (props) => {
                 </motion.div>
                 <motion.div initial="hidden"
                             whileInView="visible"
-                            viewport={{amount: 0.3, once: true}}
+                            viewport={{amount: 0.5, once: true}}
                             className={styles['delivery__section']}>
                     <motion.h2 variants={horizontalAnimation(1)} className={styles.h2}>Return Policy</motion.h2>
                     <motion.p variants={horizontalAnimation(3)}>
@@ -112,7 +112,7 @@ const Delivery = (props) => {
                 </motion.div>
                 <motion.div initial="hidden"
                             whileInView="visible"
-                            viewport={{amount: 0.3, once: true}}
+                            viewport={{amount: 0.5, once: true}}
                             className={styles['delivery__section']}>
                     <motion.h2 variants={horizontalAnimation(1)} className={styles.h2}>Customer support</motion.h2>
                     <motion.p variants={horizontalAnimation(3)}>
