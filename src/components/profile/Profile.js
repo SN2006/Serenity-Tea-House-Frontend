@@ -89,7 +89,7 @@ const Profile = (props) => {
             {},
             {}
         ).then(response => {
-            console.log(response.data);
+            // console.log(response.data);
             // console.log(new Date(Date.parse(response.data.createdAt)))
             setUser(response.data);
             setAddress(response.data.address);
@@ -147,7 +147,7 @@ const Profile = (props) => {
                     key={2}
                     title="Contacts"
                     showHeaders={true}
-                    info={{email: user.email, phone: user.phone}}
+                    info={{email: user.email, phone: user.phone, nickname: user.nickname}}
                 />
                 <UserDetailsCard
                     onEdit={onClickEditButtonHandler}

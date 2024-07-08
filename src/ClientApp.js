@@ -126,7 +126,7 @@ function ClientApp() {
             return <ClientOrders/>
         }
         if (activePage === CLIENT_CHATS_PAGE){
-            return <ClientChats/>
+            return <ClientChats onUnauthorize={onUnauthorizedHandler}/>
         }
         return <div></div>
     }

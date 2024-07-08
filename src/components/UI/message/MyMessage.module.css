@@ -1,0 +1,13 @@
+.message{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.message p{
+    font-family: "Rosting Gapertas", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: right;
+    max-width: 45%;
+}

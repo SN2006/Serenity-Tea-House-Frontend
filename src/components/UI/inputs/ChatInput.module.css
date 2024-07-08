@@ -1,0 +1,66 @@
+.input__container{
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.input{
+    outline:none;
+    border:none;
+    margin: 1rem auto;
+    height: 43px;
+    width: calc(100% - 64px);
+    border-radius: 18px;
+    font-family: "Rosting Gapertas", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 27.2px;
+    padding: 0 2rem;
+}
+
+.actions{
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    right: 1rem;
+}
+
+.button{
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.input::placeholder{
+    font-family: "Rosting Gapertas", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 27.2px;
+    text-align: left;
+}
+
+.light-grey{
+    background: rgba(217, 217, 217, 1);
+    color: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(109, 109, 109, 1)
+}
+
+.light-grey::placeholder{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.light-brown{
+    background: rgba(229, 216, 208, 1);
+    color: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(109, 109, 109, 1)
+}
+
+.light-brown::placeholder{
+    color: rgba(0, 0, 0, 0.5);
+}

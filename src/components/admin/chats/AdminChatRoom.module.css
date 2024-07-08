@@ -1,0 +1,70 @@
+.chat{
+    background: rgba(228, 216, 208, 1);
+    border: 1px solid rgba(0, 0, 0, 1);
+    margin: 50px 85px;
+    height: calc(100vh - 100px);
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat__info{
+    display: flex;
+    justify-content: start;
+    padding: 14px 28px;
+    gap: 28px;
+    border-bottom: 1px solid rgba(159, 149, 143, 1);
+    flex-grow: 0;
+}
+
+.chat__usernames{
+    display: flex;
+    flex-direction: column;
+    margin: 8px 0;
+}
+
+.name{
+    font-family: "Rosting Gapertas", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 27.2px;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.nickname{
+    font-family: "Rosting Gapertas", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 17px;
+    text-align: left;
+    color: rgba(109, 98, 85, 1);
+    padding: 0;
+    margin: 0;
+}
+
+.chat__arrow{
+    margin-left: auto;
+    margin-right: 32px;
+    max-height: 87px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat__messages{
+    flex: 1;
+    padding: 29px 30px;
+    overflow: scroll;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat__input-container{
+    flex-grow: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

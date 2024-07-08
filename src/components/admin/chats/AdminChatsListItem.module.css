@@ -1,0 +1,58 @@
+.chats__list-item__card{
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 1);
+    padding: 14px 17px;
+    background: rgba(228, 216, 208, 1);
+    display: flex;
+    gap: 15px;
+    width: 464px;
+    cursor: pointer;
+}
+
+.chats__list-item__info{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 8px 0;
+}
+
+.chats__list-item__name{
+    font-family: "Rosting Gapertas", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 23.8px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.chats__list-item__nickname{
+    font-family: "Rosting Gapertas", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 17px;
+    text-align: left;
+    color: rgba(109, 98, 85, 1);
+    padding: 0;
+    margin: 0;
+}
+
+.chats__list-item__online-info{
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.chats__list-item__online{
+    font-family: "Rosting Gapertas", sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    line-height: 13.6px;
+    text-align: right;
+    color: rgba(109, 98, 85, 0.7);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}

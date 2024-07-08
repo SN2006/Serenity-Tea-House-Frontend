@@ -1,0 +1,20 @@
+.avatar{
+    width: 87px;
+    height: 87px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid rgba(109, 98, 85, 1);
+}
+
+.without-img{
+    background: rgba(159, 149, 143, 0.4);
+}
+
+.avatar span{
+    color: #fff;
+    font-size: 40px;
+    transform: translateY(7px);
+    user-select: none;
+}

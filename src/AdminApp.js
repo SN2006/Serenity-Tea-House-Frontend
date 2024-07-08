@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import {request} from "./axios_helper";
-import {CUSTOMERS_PAGE, LOGIN_PAGE, MAIN_PAGE, ORDERS_PAGE} from "./utils/Constants";
+import {CHATS_PAGE, CUSTOMERS_PAGE, LOGIN_PAGE, MAIN_PAGE, ORDERS_PAGE} from "./utils/Constants";
 import AdminLogin from "./components/admin/login/AdminLogin";
 import styles from "./App.module.css"
 import Main from "./components/Main";
@@ -8,6 +8,7 @@ import AdminHome from "./components/admin/home/AdminHome";
 import NavbarAdmin from "./components/admin/navbar/NavbarAdmin";
 import {Customers} from "./components/admin/customers/Customers";
 import {Orders} from "./components/admin/orders/Orders";
+import AdminChats from "./components/admin/chats/AdminChats";
 
 const AdminApp = () => {
     const [admin, setAdmin] = useState(null);
@@ -65,6 +66,8 @@ const AdminApp = () => {
                 return <Customers/>
             case ORDERS_PAGE:
                 return <Orders/>
+            case CHATS_PAGE:
+                return <AdminChats admin={admin}/>
             default:
                 return <div>{activePage}</div>
         }

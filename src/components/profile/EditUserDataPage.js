@@ -1,10 +1,10 @@
 import styles from "./EditUserDataPage.module.css"
 import useInput from "../../hooks/use-input";
-import PhoneInput from "react-phone-input-2";
 import UnderlineButton from "../UI/buttons/UnderlineButton";
 import {request} from "../../axios_helper";
 import EditInputWhite from "../UI/inputs/EditInputWhite";
 import InputPhoneWhite from "../UI/inputs/InputPhoneWhite";
+import {useEffect, useState} from "react";
 
 const EditUserCard = (props) => {
     return <div className={styles.card}>
@@ -13,6 +13,13 @@ const EditUserCard = (props) => {
 }
 
 const EditUserDataPage = (props) => {
+    const [nickNames, setNickNames] = useState([]);
+
+    const checkNickname = (nickname) => {
+        if (nickNames.includes(nickname)) return false;
+        return /^@[\w_]{4,30}$/.test(nickname);
+    }
+
     const {
         value: name,
         hasError: hasNameError,
@@ -40,6 +47,14 @@ const EditUserDataPage = (props) => {
         resetInputValue: resetInputMiddleName,
     } = useInput(middleName => middleName.trim() !== "", props.user.middleName);
     const {
+        value: nickname,
+        hasError: hasNicknameError,
+        isValueValid: isInputNicknameValid,
+        inputChangeHandler: inputNicknameChangeHandler,
+        inputLostFocusHandler: inputNicknameLostFocusHandler,
+        resetInputValue: resetInputNickname,
+    } = useInput(checkNickname, props.user.nickname);
+    const {
         value: country,
         hasError: hasCountryError,
         isValueValid: isInputCountryValid,
@@ -64,6 +79,21 @@ const EditUserDataPage = (props) => {
         resetInputValue: resetInputPhone,
     } = useInput(phone => phone.trim().length >= 11, props.user.phone);
 
+    useEffect(() => {
+        request(
+            "GET",
+            `/api/v1/users/nicknames/without-id/${props.user.id}`,
+            {},
+            {},
+            {}
+        ).then(res => {
+            setNickNames(res.data);
+            // console.log(res.data);
+        }).catch(error => {
+            console.log(error);
+        })
+    }, []);
+
     const saveHandler = () => {
         const body = {
             id: props.user.id,
@@ -71,6 +101,7 @@ const EditUserDataPage = (props) => {
             surname: surname,
             middleName: middleName,
             phone: phone,
+            nickname: nickname,
             address: {
                 id: props.user.address.id,
                 country: country,
@@ -89,7 +120,7 @@ const EditUserDataPage = (props) => {
         }).catch(error => console.log(error))
     }
 
-    const isFormValid = isInputNameValid && isInputSurnameValid && isInputMiddleNameValid && isInputCountryValid && isInputCityValid && isInputPhoneValid;
+    const isFormValid = isInputNameValid && isInputSurnameValid && isInputMiddleNameValid && isInputNicknameValid && isInputCountryValid && isInputCityValid && isInputPhoneValid;
 
     return <div className={styles.edit}>
         <h1 className={styles["edit__title"]}>My account</h1>
@@ -118,6 +149,15 @@ const EditUserDataPage = (props) => {
                     onBlur={inputMiddleNameLostFocusHandler}
                     value={middleName}
                     hasError={hasMiddleNameError}
+                />
+                <EditInputWhite
+                    label="Nickname"
+                    type="text"
+                    onChange={inputNicknameChangeHandler}
+                    onBlur={inputNicknameLostFocusHandler}
+                    value={nickname}
+                    hasError={hasNicknameError}
+                    placeholder="@nickname"
                 />
                 <EditInputWhite
                     label="Country"

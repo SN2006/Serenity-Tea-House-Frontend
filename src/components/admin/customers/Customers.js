@@ -18,14 +18,14 @@ const customersVariants = {
     hidden: {
         opacity: 0,
         scale: 0.5,
-        translateY: "-5rem",
-        transition: {duration: 0.3},
+        // translateY: "-5rem",
+        transition: {duration: 0.7},
     },
     visible: {
-        translateY: "0",
+        // translateY: "0",
         opacity: 1,
         scale: 1,
-        transition: {duration: 0.3},
+        transition: {duration: 0.7},
     }
 }
 

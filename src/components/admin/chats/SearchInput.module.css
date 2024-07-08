@@ -1,0 +1,32 @@
+.input{
+    border-radius: 30px;
+    border: 1px solid rgba(159, 149, 143, 1);
+    background: transparent;
+    width: 100%;
+    max-width: 625px;
+    height: 60px;
+    padding: 0;
+    color: rgba(179, 158, 146, 1);
+    font-family: "Rosting Gapertas", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 23.8px;
+    text-align: center;
+    outline: 0;
+}
+
+.input::placeholder{
+    font-family: "Rosting Gapertas", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 23.8px;
+    text-align: center;
+    color: rgba(179, 158, 146, 0.85);
+}
+
+.inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}

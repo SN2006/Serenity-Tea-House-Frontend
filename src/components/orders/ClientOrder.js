@@ -68,7 +68,7 @@ const ClientOrder = (props) => {
                         <tbody>
                         <tr>
                             <th>Date</th>
-                            <td>{`${createdAt.getFullYear()}.${createdAt.getMonth()}.${createdAt.getDate()}`}</td>
+                            <td>{`${createdAt.getFullYear()}.${createdAt.getMonth() + 1}.${createdAt.getDate()}`}</td>
                         </tr>
                         <tr>
                             <th>Number</th>

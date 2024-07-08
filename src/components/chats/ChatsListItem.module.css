@@ -1,0 +1,40 @@
+.chats__list-item{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    background: rgba(229, 216, 208, 1);
+    border: 1px solid rgba(109, 98, 85, 1);
+    border-radius: 15px;
+    padding: 14px 17px;
+    cursor: pointer;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    height: 100%;
+    gap: 5px;
+}
+
+.name{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 23.8px;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.paragraph{
+    padding: 0;
+    margin: 5px 0;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 17px;
+    text-align: left;
+    color: rgba(109, 98, 85, 1);
+}
